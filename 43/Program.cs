@@ -11,7 +11,9 @@ Console.WriteLine($"Введите коэффициент {arrayName[i]}: ");
     arrayData[i]= Convert.ToInt32(Console.ReadLine());
 }
 
- double   x = (arrayData[3]-arrayData[1])/(arrayData[0]-arrayData[2]);
+if ((arrayData[3]-arrayData[1]) != 0 && (arrayData[0]-arrayData[2]) != 0){
+ double   x = (arrayData[3]-arrayData[1])/(arrayData[0]-arrayData[2]);   
  double   y = arrayData[0] * x +arrayData[1];
-
-Console.WriteLine($"Введите коэффициент ({x}; {y}) ");
+ Console.WriteLine($"Точка пересечения ({x}; {y}) ");
+ } else
+Console.WriteLine("Точки пересечения нет");
