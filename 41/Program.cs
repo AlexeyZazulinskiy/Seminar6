@@ -5,8 +5,8 @@
 //1, -7, 567, 89, 223-> 3
 
 Console.Clear();
-Console.WriteLine("Введите числа через запятую: ");
-int[] arrayNumber = Console.ReadLine().Split(",").Select(x => int.Parse(x)).ToArray();
+Console.WriteLine("Введите числа через пробел: ");
+int[] arrayNumber = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
 int count =0;
     for (int i =0; i<arrayNumber.Length;i++){
         if (arrayNumber[i]> 0) count++;
